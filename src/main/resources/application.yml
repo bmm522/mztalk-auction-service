@@ -6,7 +6,7 @@ spring:
     name: auction-service
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mztalk-mysql:3306/auctionService?serverTime=UTC
+    url: jdbc:mysql://mztalk-mysql:3306/auctionService?autoReconnect=true&useSSL=false
     username: auction
     password: auction
 
