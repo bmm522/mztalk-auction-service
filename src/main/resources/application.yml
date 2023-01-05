@@ -1,6 +1,16 @@
 server:
   port: 8082
 
+eureka:
+  instance:
+    instance-id: auction-api
+
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://3.39.183.175:8761/eureka
+
 spring:
   application:
     name: auction-service
@@ -16,13 +26,3 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       show-sql: true
-
-eureka:
-  instance:
-    instance-id: auction-api
-
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://3.39.183.175:8761/eureka
